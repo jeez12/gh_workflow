@@ -1,0 +1,13 @@
+name: workflow2
+on: push
+jobs: 
+  get-code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Code
+      uses: actions/checkout@v3
+  install-dep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm ci
